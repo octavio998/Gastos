@@ -22,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnLogin;
     private EditText editTextNombre;
     private EditText editTextPassword;
+    private Button btnCuentacrear;
 
     public void login(String email, String password){
 
@@ -53,6 +54,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         editTextNombre = findViewById(R.id.textUser);
         editTextPassword = findViewById(R.id.textPassword);
+        btnCuentacrear = findViewById(R.id.btnCuentacrear);
         btnLogin.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -63,6 +65,13 @@ public class LoginActivity extends AppCompatActivity {
                 login(valorEditTextNombre, valorEditTextPassword);
 
 
+            }
+        });
+        btnCuentacrear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent2);
             }
         });
 

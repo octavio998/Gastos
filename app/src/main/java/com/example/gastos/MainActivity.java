@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout layoutPadre;
     private int contador = 1;
     private Button btnRedirect;
+
     //private ArrayList<EditText> listaMontos;
     //variables de resultado
     private Double promedioProductos;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         editTextMonto = findViewById(R.id.editTextMonto);
         btnSubir = findViewById(R.id.btnSubir);
         btnRedirect = findViewById(R.id.btnRedirect);
+
 
         btnSubir.setOnClickListener(new View.OnClickListener() {
 
