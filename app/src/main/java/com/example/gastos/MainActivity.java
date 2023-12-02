@@ -12,9 +12,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
     private EditText editTextNombre;
     private EditText editTextMonto;
     private Button btnSubir;
@@ -32,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
 
         editTextNombre = findViewById(R.id.editTextNombre);
         editTextMonto = findViewById(R.id.editTextMonto);
@@ -76,6 +82,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Log.i("firebase","hay usuario");
+            String email = currentUser.getEmail();
+            Log.i("su email",email);
+        }else{
+            Log.i("su email","nulo");
+            Intent intent2 = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent2);
+        }
     }
 
 
