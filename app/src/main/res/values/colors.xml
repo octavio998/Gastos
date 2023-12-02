@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="butonAction">#009688</color>
+
+    <color name="background">#F3F3F3</color>
+    <color name="tipography">#0766AD</color>
 </resources>

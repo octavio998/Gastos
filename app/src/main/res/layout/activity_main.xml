@@ -5,14 +5,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#FFD8B9">
 
     <EditText
         android:id="@+id/editTextNombre"
         android:layout_width="123dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
-        android:hint="Nombre"
+        android:hint="@string/inputNombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +23,7 @@
         android:layout_width="146dp"
         android:layout_height="48dp"
         android:layout_marginTop="25dp"
-        android:hint="Monto Numérico"
+        android:hint="@string/inputPrecio"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -35,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Subir"
+        android:backgroundTint="@color/butonAction"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextMonto" />
@@ -45,53 +47,25 @@
         android:layout_height="285dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSubir">
+        app:layout_constraintTop_toBottomOf="@+id/btnSubir"
+        app:layout_constraintVertical_bias="0.495"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:background="#FFFFFF">
 
         <LinearLayout
             android:id="@+id/layoutPadre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/layoutHijo1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
 
-                <TextView
-                    android:id="@+id/nombre1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Pedro" />
 
-                <TextView
-                    android:id="@+id/monto1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Monto: $54" />
 
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/layoutHijo2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/textViews2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Mati" />
-
-                <TextView
-                    android:id="@+id/montoView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Monto: $57" />
-
-            </LinearLayout>
 
         </LinearLayout>
 
@@ -102,6 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calcular Gastos"
+        android:backgroundTint="@color/butonAction"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

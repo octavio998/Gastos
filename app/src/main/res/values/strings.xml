@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Gastos</string>
+    <string name="inputNombre">Producto</string>
+    <string name="inputPrecio">Precio</string>
 </resources>
